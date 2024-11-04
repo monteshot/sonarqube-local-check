@@ -3,6 +3,7 @@ docker compose up -d
 if [ -f .env ]; then
     export $(grep -v '^#' .env | xargs)
 fi
+PROJECT_VERSION=$(date +'%Y.%m.%d.%H%M%S')
 
 docker run \
     --rm \
@@ -15,5 +16,6 @@ docker run \
     -Dsonar.qualitygate.wait=true \
     -Dsonar.exclusions=app/code/Hyva/CmsTailwindJit/view/adminhtml/web/*,app/code/Pointspay/Pointspay/Test \
     -Dsonar.inclusions=app/code/Perspective/**,app/code/CodeCustom/**,app/design/**,app/code/Pointspay/** \
+    -DSonar.projectVersion=${PROJECT_VERSION} \
      "\
     sonarsource/sonarqube-scan
