@@ -16,6 +16,5 @@ docker run \
     -Dsonar.qualitygate.wait=true \
     -Dsonar.exclusions=app/code/Hyva/CmsTailwindJit/view/adminhtml/web/*,app/code/Pointspay/Pointspay/Test \
     -Dsonar.inclusions=app/code/Perspective/**,app/code/CodeCustom/**,app/design/**,app/code/Pointspay/** \
-    -DSonar.projectVersion=${PROJECT_VERSION} \
-     "\
+    -DSonar.projectVersion=${PROJECT_VERSION} "\
     sonarsource/sonarqube-scan
