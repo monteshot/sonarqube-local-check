@@ -5,7 +5,7 @@
 ```
 2.  The scan.sh script will build the Docker image and start the container with the web application.
 3.  Navigate to application. Login with the following credentials:  
-
+![img.png](img.png)
 Username:  
 ```
 admin
@@ -19,3 +19,4 @@ admin
 5. Create local project and get sonarqube token in sonarqube web application
 6. Copy .env.example to .env and set your sonarqube settings
 7. Rerun scan.sh script and get the result in sonarqube web application
+![img_1.png](img_1.png)
