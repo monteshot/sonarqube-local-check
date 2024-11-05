@@ -14,7 +14,7 @@ docker run \
     -e SONAR_TOKEN="${SONAR_TOKEN}" \
     -e EXTRA_ARGS="-Dsonar.projectKey=${PROJECT_KEY} \
     -Dsonar.qualitygate.wait=true \
-    -Dsonar.exclusions=app/code/Hyva/CmsTailwindJit/view/adminhtml/web/*,app/code/Pointspay/Pointspay/Test \
-    -Dsonar.inclusions=app/code/Perspective/**,app/code/CodeCustom/**,app/design/**,app/code/Pointspay/** \
+    -Dsonar.exclusions=app/code/Hyva/CmsTailwindJit/view/adminhtml/web/*,dev/** \
+    -Dsonar.inclusions=app/code/**,app/design/** \
     -DSonar.projectVersion=${PROJECT_VERSION} "\
     sonarsource/sonarqube-scan
